@@ -1,21 +1,22 @@
-{% load static %}
+ {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Demo</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}"> 
 </head>
 <body>
- <header class="hero">
+    <header>
+<section class="hero" style ="background: url('{% static 'css/image/pencil.jpg' %}')">
     <div class="menu-icon"><span></span><span></span><span></span></div>
     <div class="hero-content">
-        <img src href="/images/joanna-kosinska-bF2vsubyHcQ-unsplash copy.jpg" alt="">
         <h1>Stylish Portfolio</h1>
         <p>A Free Bootstrap theme by Start Bootstrap</p>
         <a href="#" class="btn btn-blue">Find Out More</a>
     </div>
+    </section>
 </header>
 
 <section class="about">
@@ -23,46 +24,55 @@
     <p>This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at Unsplash!</p>
     <a href="#" class="btn btn-dark">What we offer</a>
 </section>
+ 
+<section class="services" style="background-color: rgba(29, 120, 212, 0.8);">
+    <h2 style="color: yellow;">SERVICES</h2>
+    <h1>What We offer</h1>
 
-<div class="divider-blue"></div>
-
-
-<section class="services">
-    <h5>SERVICES</h5>
-    <h2>What We offer</h2>
-    <div class="servicesicon">
-      <div>
-        <img src="./images/icons/iphone.png" alt="responsive">
-        <h3>Responsive</h3>
-        <p>Looks great on any screen size</p>
-      </div>
-      <div>
-        <img src="./images/icons/pen.png" alt="redesigned">
-        <h3>Redesigned</h3>
-        <p>Freshly designed for bootstrap 4.</p>
-      </div>
-      <div>
-        <img src="./images/icons/like.png" alt="favorited">
-        <h3>Favorited</h3>
-        <p>millions of users love start Bootstrap!</p>
-      </div>
-      <div>
-        <img src="./images/icons/mustache.png" alt="question">
-        <h3>Questioned</h3>
-        <p>I mustache you a Question...</p>
-      </div>
+    <div class="services-container">
+    
+    <div class="service-box">
+      <div class="icon"><img src="{% static 'css/icons/iphone.png'%}" alt=""></div>
+      <h3 style="color: #fff;">Responsive</h3>
+      <p style="color: #fff;">Looks great on any screen size</p>
     </div>
+
+    <div class="service-box">
+      <div class="icon"><img src="{% static 'css/icons/facebook (2).png'%}" alt=""></div>
+      <h3 style="color: #fff;">Redesigned</h3>
+      <p style="color: #fff;">Freshly designed for bootstrap 4.</p>
+    </div>
+
+    <div class="service-box">
+      <div class="icon"><img src="{% static 'css/icons/like.png'%}" alt=""></div>
+      <h3 style="color: #fff;">Favorited</h3>
+      <p style="color: #fff;">Millions of users love it!</p>
+    </div>
+
+    <div class="service-box">
+      <div class="icon"><img src="{% static 'css/icons/mustache.png'%}" alt=""></div>
+      <h3 style="color: #fff;">Questioned</h3>
+      <p style="color: #fff;">I mustache you a question...</p>
+    </div>
+
+  </div>
 </section>
+        
+
+{% comment %} 
+<div class="divider-blue"></div> {% endcomment %}
 
 
-<div class="divider-blue"></div>
 
-<section class="cta">
+
+{% comment %} <div class="divider-blue"></div> {% endcomment %}
+
+<section class="cta" style="background: url('{% static 'css/image/pencil.jpg' %}') center center/cover;">
     <h2>Welcome to your next website</h2>
     <a href="#" class="btn btn-blue">Download now</a>
 </section>
 
-<div class="divider-blue"></div>
+{% comment %} <div class="divider-blue"></div> {% endcomment %}
 
 <section class="portfolio">
     <p class="section-subtitle" style="color :rgba(255,193,7,0.8)">PORTFOLIO</p>
@@ -94,26 +104,30 @@
             </div>
         </div>
     </section>
-
-    <section class="footer-cta">
+    <section class="cta-section" style="background-colour: rgba(29, 120, 212, 0.8);">
+    <div class="cta-container" style="background-color: rgba(29, 120, 212, 0.8);">
         <h2>The buttons below are impossible to resist...</h2>
-        <div class="btn-group">
+        <div class="button-group">
             <a href="#" class="btn btn-light">Click Me!</a>
             <a href="#" class="btn btn-dark">Look at Me!</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <div class="map"></div>
-
-    <footer>
-        <div class="social-icons">
-            <a href="#"><img src="/icons/facebook.png" alt="facebook"></a>
-            <a href="#"><img src="/icons/twitter.png" alt="twitter"></a>
-            <a href="#"><img src="/icons/merge.png" alt="merge"></a>
-        </div>
-
-        <p>copyright(c) @ Nicanor Madziko</p>
-    </footer>
-
+<section class="map" style="background: url('{% static 'css/image/map.png' %}') center center/cover;"></section>
+<footer class="main-footer">
+    <div class="social-icons">
+        <a href="#" class="icon-link">
+            <img src="{% static 'css/icons/facebook (2).png'%}" alt="Facebook">
+        </a>
+        <a href="#" class="icon-link">
+            <img src="{% static 'css/icons/twitter (2).png'%}" alt="Twitter">
+        </a>
+        <a href="#" class="icon-link">
+            <img src="{% static 'css/icons/merge.png'%}" alt="GitHub">
+        </a>
+    </div>
+    <p class="copyright">copyright(c) @ nicanor m</p>
+</footer> 
 </body>
-</html>
+</html>  

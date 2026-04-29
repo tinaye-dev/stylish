@@ -35,7 +35,7 @@ section {
 
 .hero {
     height: 100vh;
-    background: #ffc107 url('/images/joanna-kosinska-1_CMoFsPfso-unsplash.jpg') no-repeat center center/cover;
+    background: #ffc107 url('image/joanna-kosinska-1_CMoFsPfso-unsplash.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,11 +71,35 @@ section {
 }
 
 .cta {
-    background:rgba(255,193,7,0.8) url('/images/joanna-kosinska-bF2vsubyHcQ-unsplash\ copy.jpg');
+    background:rgba(255,193,7,0.8) url('image/joanna-kosinska-bF2vsubyHcQ-unsplash\ copy.jpg');
     background-size: cover;
     color: #333;
 }
+.services{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.services-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.services-box .service {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
+.icon{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    flex-direction: row;
+}
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -107,40 +131,43 @@ section {
 
 .portfolio .item1 {
     height: 35vh;
-    background:rgba(255,193,7,0.8) url('/images/stationery.jpg');
+    background:rgba(255,193,7,0.8) url('../css/image/scissors.jpg');
     background-size: cover;
     color: #333;
 }
 
 .portfolio .item2 {
     height: 35vh;
-    background:rgba(255,193,7,0.8) url('/images/ice\ cream.jpg');
+    background:rgba(255,193,7,0.8) url('../css/image/dare.jpg');
     background-size: cover;
     color: #333;
 }
 
 .portfolio .item3 {
     height: 35vh;
-    background:rgba(255,193,7,0.8) url('/images/strawberry.jpg');
+    background:rgba(255,193,7,0.8) url('../css/image/strawberry.jpg');
     background-size: cover;
     color: #333;
 }
 
 .portfolio .item4 {
     height: 35vh;
-    background:rgba(255,193,7,0.8) url('/images/workplace.jpg');
+    background:rgba(255,193,7,0.8) url('../css/image/nicanor.jpg');
     background-size: cover;
     color: #333;
 }
-
 .footer-cta {
     background-color: #337ab7;
     color: white;
 }
-
+.cta-container {
+    background:rgba(29, 120, 212, 0.8) url('image/joanna-kosinska-bF2vsubyHcQ-unsplash\ copy.jpg');
+    background-size: cover;
+    color: #333;
+}
 .map {
     height: 100vh;
-    background:rgba(255,193,7,0.8) url('/images/dzikwa\ map.png');
+    background:rgba(255,193,7,0.8) url('image/dzikwa\ map.png');
 }
 
 footer {
@@ -154,10 +181,11 @@ footer {
     justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
+    flex-direction: row;
 }
 
 .map {
     height: 100vh;
-    background:rgba(255,193,7,0.8) url('/images/dzikwa\ map.png');
+    background:rgba(255,193,7,0.8) url('image/dzikwa\ map.png');
 }
 
